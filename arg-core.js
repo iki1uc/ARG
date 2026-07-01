@@ -1,13 +1,23 @@
 import { ARG_DATA } from "./arg-data.js";
 
-export function ARG(term, mode = "wiki") {
+export function ARG(term, mode = "wiki", evo = true) {
   const entry = ARG_DATA[term];
-  if (!entry) return { term, mode, content: "Unbekannt." };
+  if (!entry) return { term, mode, content: "Unbekannt.", evo };
 
-  if (mode === "wiki")        return { term, mode, content: entry.wiki };
-  if (mode === "encyclopedia")return { term, mode, content: entry.encyclopedia };
-  if (mode === "argmedia")    return { term, mode, content: entry.argmedia };
+  let content;
 
-  return { term, mode, content: entry.core };
+  if (mode === "wiki")         content = entry.wiki;
+  else if (mode === "encyclopedia") content = entry.encyclopedia;
+  else if (mode === "argmedia")     content = entry.argmedia;
+  else if (mode === "ist")          content = entry.ist;
+  else if (mode === "soll")         content = entry.soll;
+  else if (mode === "evo")          content = entry.evo;
+  else                              content = entry.core;
+
+  return {
+    term,
+    mode,
+    evo,
+    content
+  };
 }
-
