@@ -1,1 +1,10 @@
+<script type="module">
+  import { TMP_LIVE } from "./arg-live.js";
+
+  const out = TMP_LIVE("Instanz");
+  document.getElementById("out").textContent =
+    JSON.stringify(out, null, 2);
+</script>
+
+<pre id="out"></pre>
 
