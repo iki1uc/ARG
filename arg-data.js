@@ -26,3 +26,15 @@ Instanz 'DIR‑01' verarbeitet Impulse über MIR → RESPO → ARG → DIR.
     }
   }
 };
+ARG_DATA["CH_GATE"] = {
+  ist: "Wurmloch-Gate für Ereigniswechsel.",
+  soll: "Kurz, klar, Tech+Art 5+5 Worte.",
+  evo: "Trägt EVO, wenn NC=OK und Ghost neutral.",
+  wiki: "Kurz: Ereignis-Gate.",
+  encyclopedia: "CH_GATE erklärt Ereignisse mit Tech+Art-Frame...",
+  argmedia: {
+    story: "Wenn ein Gate flackert und die Welt kurz anders atmet...",
+    tags: ["wurmloch", "gate", "ereignis"],
+    resume: "CH_GATE macht komplexe Ereignisse kurz erklärbar."
+  }
+};
